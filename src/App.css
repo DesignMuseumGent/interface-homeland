@@ -1,0 +1,73 @@
+html, body {
+    background: white;
+    color: black;
+    font-family: Poppins-Light;
+}
+
+.screenContainer{
+    width: 100vw;
+    height: 100vh;
+}
+
+.center-portrait {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100vh;
+}
+
+.center-landscape {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 100%
+}
+
+@font-face {
+    font-family: "Poppins-Light";
+    src: local("Poppins-Light"), url(fonts/Poppins-Light.ttf);
+}
+
+h1{
+    font-family: "Poppins-Light";
+}
+
+img {
+    height: 100vh;
+    width: 100vw;
+    object-fit:contain;
+}
+
+p{
+    font-size: 2vh;
+}
+
+.textContainer{
+    padding: 5vw;
+}
+
+.grid-even-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr
+}
+
+.textViewer{
+    display: grid;
+    grid-template-rows: 1fr 1fr 8fr 1fr;
+}
+
+.button {
+    border: black solid 2px;
+    border-radius: 20px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/*EMBLA*/
+
+.embla {overflow: hidden;}
+.embla__container { display: flex;}
+.embla__slide {  flex: 0 0 100%;  min-width: 0;}
+
