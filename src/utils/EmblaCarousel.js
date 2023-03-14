@@ -11,13 +11,19 @@ import {s4} from "./imagesByIndex";
 
 const EmblaCarousel = (props) => {
 
+    let s;
+    const stories = [s0, s1, s2, s3, s4]
+
+    s = props.story
+    let story = stories[s]
+
     const autoplayOptions = {  delay: 8000,  rootNode: (emblaRoot) => emblaRoot.parentElement,}
 
     const [emblaRef] = useEmblaCarousel({ loop: false }, [Autoplay(autoplayOptions)])
     return(
         <div className={"embla"} ref={emblaRef}>
             <div className={"embla__container"}>
-                {s0.map(im=> {
+                {story.map(im=> {
                     return(
                         <div className={"embla__slide"}>
                             <img src={im}/>
