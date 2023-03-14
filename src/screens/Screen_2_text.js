@@ -1,5 +1,6 @@
 import React, {useEffect, useState, useTransition} from "react";
 import texts from "../data/text.json"
+import TextBlock from "../utils/TextBlock";
 
  const Screen2text = (props) =>  {
 
@@ -52,27 +53,21 @@ import texts from "../data/text.json"
 
      return(
          <div className={"textBlock"}>
-             <div>
-                 <h1 style={{textAlign:"center"}}>{texts[story]["NL"]["title"]}</h1>
-                 <div className={"textContainer"}>
-                     <p>{texts[story]["NL"]["text"]}</p>
+             <TextBlock lang={language} story={story}/>
+             <div className={"grid-even-3"}>
+                 <div>
+                     <p className={"button text"} onClick={()=>resetText("NL")}>NL</p>
                  </div>
-             </div>
-
-             <div>
-                 <h1 style={{textAlign:"center"}}>{texts[story]["UK"]["title"]}</h1>
-                 <div className={"textContainer"}>
-                     <p>{texts[story]["UK"]["text"]}</p>
+                 <div>
+                     <p className={"button text"} onClick={()=>resetText("EN")}>EN</p>
                  </div>
-             </div>
-
-             <div>
-                 <h1 style={{textAlign:"center"}}>{texts[story]["EN"]["title"]}</h1>
-                 <div className={"textContainer"}>
-                     <p>{texts[story]["EN"]["text"]}</p>
+                 <div>
+                     <p className={"button text"} onClick={()=>resetText("UK")}>UK</p>
                  </div>
              </div>
          </div>
+
+
          /*<div className={"textViewer"}>
              <div></div>
              <h1 style={{textAlign:"center"}}>{title}</h1>

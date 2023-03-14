@@ -32,6 +32,8 @@ html, body {
     height: 100%
 }
 
+/* FONTS */
+
 @font-face {
     font-family: "Poppins-Light";
     src: local("Poppins-Light"), url(fonts/Poppins-Light.ttf);
@@ -39,7 +41,6 @@ html, body {
 
 h1{
     font-family: "Poppins-Light";
-    font-size: 25px;
 }
 
 img {
@@ -50,6 +51,14 @@ img {
 
 p{
     font-size: 2vh;
+}
+
+.text{
+    font-size: 5vw;
+}
+
+.title{
+    font-size: 6vw;
 }
 
 .textContainer{
@@ -69,9 +78,10 @@ p{
 }
 
 .button {
-    border: black solid 2px;
+    border: black solid 4px;
     border-radius: 20px;
-    width: 50px;
+    width: 70px;
+    top: 2px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
