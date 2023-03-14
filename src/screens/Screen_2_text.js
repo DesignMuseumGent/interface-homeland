@@ -20,9 +20,13 @@ import TextBlock from "../utils/TextBlock";
          let minute = new Date().getMinutes();
          let second = new Date().getSeconds();
          if (second == 20){
-             if (story < 4){
+             if (story < 5){
                  setStory(Number(story) + 1)
                  fetchData(story, language)
+                 if (story == 5) {
+                     setStory(0)
+                     fetchData(story, language)
+                 }
              } else {
                  console.log(story)
                  setStory(0);
