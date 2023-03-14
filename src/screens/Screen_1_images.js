@@ -14,7 +14,7 @@ const Screen1images = (props) =>  {
     function checkTime() {
         let minute = new Date().getMinutes();
         let second = new Date().getSeconds();
-        if (minute % 2 == 0 && second == 0) {
+        if (second == 20) {
             if (story < 5){
                 console.log(story)
                 setStory(Number(story) + 1)

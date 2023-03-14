@@ -19,7 +19,7 @@ import TextBlock from "../utils/TextBlock";
      function checkTime() {
          let minute = new Date().getMinutes();
          let second = new Date().getSeconds();
-         if (minute % 2 == 0 && second == 0) {
+         if (second == 20){
              if (story < 5){
                  setStory(Number(story) + 1)
                  fetchData(story, language)
@@ -34,7 +34,7 @@ import TextBlock from "../utils/TextBlock";
      }
 
      function fetchData(storyNumber, lang) {
-         for (let i = 0; i < texts.length; i++) {
+         for (let i = 0; i < 5; i++) {
              if (texts[i].story == storyNumber) {
                  setText(texts[i][lang]["text"]);
                  setTitle(texts[i][lang]["title"])
