@@ -1,5 +1,5 @@
 import React, {useEffect, useState, useTransition} from "react";
-import texts from "../data/text.json"
+import texts from "../data/MilkedCeramics.json"
 import TextBlock from "../utils/TextBlock";
 
  const Screen2text = (props) =>  {
@@ -9,7 +9,9 @@ import TextBlock from "../utils/TextBlock";
      const [text, setText] = useState(texts[4][language]["text"]);
      const [title, setTitle] = useState(texts[4][language]["title"]);
      //console.log(language)
+     console.log(text);
 
+     let counter = 4;
 
      setInterval(function(){
          checkTime();
@@ -20,14 +22,13 @@ import TextBlock from "../utils/TextBlock";
          let minute = new Date().getMinutes();
          let second = new Date().getSeconds();
          if (second == 20){
-             if (story < 5){
+             counter = counter + 1
+             console.log(counter)
+             if (counter < 5){
                  setStory(Number(story) + 1)
                  fetchData(story, language)
-                 if (story == 5) {
-                     setStory(0)
-                     fetchData(story, language)
-                 }
              } else {
+                 counter = 0;
                  console.log(story)
                  setStory(0);
                  fetchData(story, language)

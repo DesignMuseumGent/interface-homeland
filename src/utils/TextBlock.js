@@ -1,5 +1,5 @@
 import React from "react";
-import texts from "../data/text.json";
+import texts from "../data/MilkedCeramics.json";
 
 const TextBlock = (props) => {
     const _lang = props.lang;

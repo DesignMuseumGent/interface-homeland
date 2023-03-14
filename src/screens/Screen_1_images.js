@@ -3,6 +3,8 @@ import EmblaCarousel from "../utils/EmblaCarousel";
 
 const Screen1images = (props) =>  {
 
+    let counter = 4;
+
     const [story, setStory] = useState(4)
     console.log(story)
 
@@ -15,14 +17,14 @@ const Screen1images = (props) =>  {
         let minute = new Date().getMinutes();
         let second = new Date().getSeconds();
         if (second == 20) {
-            if (story < 5){
+            counter = counter + 1
+            console.log(counter)
+
+            if (counter < 5){
                 console.log(story)
-                setStory(Number(story) + 1)
-                if (story == 5) {
-                    setStory(0)
-                }
+                setStory(Number(story) + 1);
             } else {
-                console.log(story)
+                console.log(story);
                 setStory(0);
             }
         } else {
