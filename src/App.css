@@ -97,7 +97,7 @@ p{
     top: auto;
     bottom: auto;
     display: grid;
-    grid-template-rows: 5fr 2fr;
+    grid-template-rows: 80vh 20vh;
 }
 
 /*EMBLA*/
