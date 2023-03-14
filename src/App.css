@@ -1,7 +1,16 @@
 html, body {
-    background: white;
-    color: black;
-    font-family: Poppins-Light;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+
+    text-rendering: optimizeLegibility;
+    cursor: cell;
+    scroll-behavior: smooth;
+    orientation: landscape;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
 }
 
 .screenContainer{

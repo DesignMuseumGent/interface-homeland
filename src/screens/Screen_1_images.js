@@ -35,7 +35,7 @@ const Screen1images = (props) =>  {
     }
 
     return(
-        <div className={"screenContainer"}>
+        <div>
             <EmblaCarousel story={story}/>
         </div>
     )
