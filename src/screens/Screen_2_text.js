@@ -5,6 +5,7 @@ import texts from "../data/text.json"
 
      setInterval(function(){
          checkTime();
+         resetText(language, story, language)
      }, 1000)
 
 
@@ -40,10 +41,11 @@ import texts from "../data/text.json"
          }
      }
 
-     function resetText(_lang) {
+     function resetText(_lang, story, language) {
          setLanguage(_lang)
          fetchData(story, language)
      }
+
 
      return(
          <div className={"textViewer"}>
