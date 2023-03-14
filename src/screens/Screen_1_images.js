@@ -3,7 +3,7 @@ import EmblaCarousel from "../utils/EmblaCarousel";
 
 const Screen1images = (props) =>  {
 
-    const [story, setStory] = useState(0)
+    const [story, setStory] = useState(4)
     console.log(story)
 
     setInterval(function(){

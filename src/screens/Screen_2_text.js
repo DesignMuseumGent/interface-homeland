@@ -4,10 +4,10 @@ import TextBlock from "../utils/TextBlock";
 
  const Screen2text = (props) =>  {
 
-     const [story, setStory] = useState(0);
+     const [story, setStory] = useState(4);
      const [language, setLanguage] = useState("NL");
-     const [text, setText] = useState(texts[0][language]["text"]);
-     const [title, setTitle] = useState(texts[0][language]["title"]);
+     const [text, setText] = useState(texts[4][language]["text"]);
+     const [title, setTitle] = useState(texts[4][language]["title"]);
      //console.log(language)
 
 
