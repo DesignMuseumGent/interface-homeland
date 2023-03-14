@@ -63,6 +63,7 @@ import texts from "../data/text.json"
                      <p className={"button"} onClick={()=>resetText("UK")}>UK</p>
                  </div>
              </div>
+             <div></div>
          </div>
      )
  }

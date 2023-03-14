@@ -62,7 +62,7 @@ p{
 
 .textViewer{
     display: grid;
-    grid-template-rows: 1fr 1fr 8fr 1fr;
+    grid-template-rows: 1fr 1fr 8fr 1fr 2fr;
 }
 
 .button {
