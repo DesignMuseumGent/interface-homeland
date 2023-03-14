@@ -3,8 +3,29 @@ import texts from "../data/text.json"
 
  const Screen2text = (props) =>  {
 
+     setInterval(function(){
+         checkTime();
+     }, 1000)
+
+
+     function checkTime() {
+         let minute = new Date().getMinutes();
+         let second = new Date().getSeconds();
+         if (minute % 2 == 0 && second == 0) {
+             if (story < 5){
+                 console.log(story)
+                 setStory(Number(story) + 1)
+             } else {
+                 console.log(story)
+                 setStory(0);
+             }
+         } else {
+
+         }
+     }
+
      const [dateState, setDateState] = useState(new Date());
-     const [story, setStory] = useState(1);
+     const [story, setStory] = useState(0);
      const [language, setLanguage] = useState("NL");
      const [text, setText] = useState(texts[1]["NL"]["text"]);
      const [title, setTitle] = useState(texts[1]["NL"]["title"]);
