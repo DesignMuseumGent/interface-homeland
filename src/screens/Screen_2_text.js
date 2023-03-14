@@ -8,11 +8,11 @@ import texts from "../data/text.json"
      const [language, setLanguage] = useState("NL");
      const [text, setText] = useState(texts[0]["NL"]["text"]);
      const [title, setTitle] = useState(texts[0]["NL"]["title"]);
-     console.log(story)
+     console.log(language)
 
      setInterval(function(){
          checkTime();
-         fetchData(story, language)
+         //fetchData(story, language)
      }, 1000)
 
 
@@ -38,14 +38,14 @@ import texts from "../data/text.json"
                  //console.log(texts[i][lang])
                  setText(texts[i][lang]["text"]);
                  setTitle(texts[i][lang]["title"])
-                 console.log(text)
              }
          }
      }
 
-     function resetText(_lang, story, language) {
-         setLanguage(_lang)
-         fetchData(story, language)
+     function resetText(lang) {
+         setLanguage(lang)
+         setText(texts[story][lang]["text"]);
+         setTitle(texts[story][lang]["title"])
      }
 
 
