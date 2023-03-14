@@ -19,7 +19,7 @@ const EmblaCarousel = (props) => {
 
     const autoplayOptions = {  delay: 8000,  rootNode: (emblaRoot) => emblaRoot.parentElement,}
 
-    const [emblaRef] = useEmblaCarousel({ loop: false }, [Autoplay(autoplayOptions)])
+    const [emblaRef] = useEmblaCarousel({ loop: true, draggable:false }, [Autoplay(autoplayOptions)])
     return(
         <div className={"embla"} ref={emblaRef}>
             <div className={"embla__container"}>
