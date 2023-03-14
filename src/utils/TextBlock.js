@@ -7,7 +7,7 @@ const TextBlock = (props) => {
 
     return(
         <div>
-            <h1 className={"title"} style={{textAlign:"center"}}>{texts[_story][_lang]["title"]}</h1>
+            <h1 className={"title"} style={{textAlign:"center", padding: "1vw"}}>{texts[_story][_lang]["title"]}</h1>
             <div className={"textContainer"}>
                 <p className={"text"}>{texts[_story][_lang]["text"]}</p>
             </div>
