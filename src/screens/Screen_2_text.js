@@ -63,7 +63,7 @@ import TextBlock from "../utils/TextBlock";
                  </div>
                  <div>
                      <div className={"button"} onClick={()=>resetText("UK")}>
-                         <p className={"text"}>UK</p>
+                         <p className={"text"}>UA</p>
                      </div>
                  </div>
              </div>
