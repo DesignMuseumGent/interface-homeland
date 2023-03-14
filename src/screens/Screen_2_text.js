@@ -4,7 +4,6 @@ import TextBlock from "../utils/TextBlock";
 
  const Screen2text = (props) =>  {
 
-     const [dateState, setDateState] = useState(new Date());
      const [story, setStory] = useState(0);
      const [language, setLanguage] = useState("NL");
      const [text, setText] = useState(texts[0][language]["text"]);
@@ -14,8 +13,6 @@ import TextBlock from "../utils/TextBlock";
 
      setInterval(function(){
          checkTime();
-         //setText(texts[story][language]["text"]);
-         //setTitle(texts[story][language]["title"])
      }, 1000)
 
 
@@ -23,7 +20,7 @@ import TextBlock from "../utils/TextBlock";
          let minute = new Date().getMinutes();
          let second = new Date().getSeconds();
          if (minute % 2 == 0 && second == 0) {
-             if (story < 4){
+             if (story < 5){
                  setStory(Number(story) + 1)
                  fetchData(story, language)
              } else {
@@ -39,7 +36,6 @@ import TextBlock from "../utils/TextBlock";
      function fetchData(storyNumber, lang) {
          for (let i = 0; i < texts.length; i++) {
              if (texts[i].story == storyNumber) {
-                 //console.log(texts[i][lang])
                  setText(texts[i][lang]["text"]);
                  setTitle(texts[i][lang]["title"])
              }
@@ -56,13 +52,19 @@ import TextBlock from "../utils/TextBlock";
              <TextBlock lang={language} story={story}/>
              <div className={"grid-even-3"}>
                  <div>
-                     <p className={"button text"} onClick={()=>resetText("NL")}>NL</p>
+                     <div className={"button"} onClick={()=>resetText("NL")}>
+                         <p className={"text"}>NL</p>
+                     </div>
                  </div>
                  <div>
-                     <p className={"button text"} onClick={()=>resetText("EN")}>EN</p>
+                     <div className={"button"} onClick={()=>resetText("EN")}>
+                         <p className={"text"}>EN</p>
+                     </div>
                  </div>
                  <div>
-                     <p className={"button text"} onClick={()=>resetText("UK")}>UK</p>
+                     <div className={"button"} onClick={()=>resetText("UK")}>
+                         <p className={"text"}>UK</p>
+                     </div>
                  </div>
              </div>
          </div>

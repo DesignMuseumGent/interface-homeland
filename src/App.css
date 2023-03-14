@@ -81,13 +81,19 @@ p{
     border: black solid 4px;
     border-radius: 20px;
     width: 70px;
-    top: 2px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
 
+.button .text {
+    font-size: 30px;
+    top: 10px;
+    bottom: 10px;
+}
+
 .textBlock {
+    height: 100vh;
     top: auto;
     bottom: auto;
     display: grid;
