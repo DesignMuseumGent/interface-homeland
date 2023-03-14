@@ -15,7 +15,7 @@ const Screen1images = (props) =>  {
         let minute = new Date().getMinutes();
         let second = new Date().getSeconds();
         if (second == 20) {
-            if (story < 5){
+            if (story < 4){
                 console.log(story)
                 setStory(Number(story) + 1)
             } else {

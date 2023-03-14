@@ -17,7 +17,7 @@ const EmblaCarousel = (props) => {
     s = props.story
     let story = stories[s]
 
-    const autoplayOptions = {  delay: 8000,  rootNode: (emblaRoot) => emblaRoot.parentElement,}
+    const autoplayOptions = {  delay: 6000,  rootNode: (emblaRoot) => emblaRoot.parentElement,}
 
     const [emblaRef] = useEmblaCarousel({ loop: true, draggable:false }, [Autoplay(autoplayOptions)])
     return(
