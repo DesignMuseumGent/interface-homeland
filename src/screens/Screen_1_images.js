@@ -1,13 +1,6 @@
 import React, {useEffect, useState} from "react";
 import EmblaCarousel from "../utils/EmblaCarousel";
 
-let time = new Date().getMinutes();
-
-
-
-
-
-
 const Screen1images = (props) =>  {
 
     const [story, setStory] = useState(0)
