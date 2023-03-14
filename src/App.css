@@ -52,7 +52,9 @@ p{
 }
 
 .textContainer{
-    padding: 5vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+
 }
 
 .grid-even-3{
@@ -72,6 +74,11 @@ p{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+}
+
+.textBlock {
+    top: auto;
+    bottom: auto;
 }
 
 /*EMBLA*/

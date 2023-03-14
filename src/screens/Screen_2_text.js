@@ -6,13 +6,15 @@ import texts from "../data/text.json"
      const [dateState, setDateState] = useState(new Date());
      const [story, setStory] = useState(0);
      const [language, setLanguage] = useState("NL");
-     const [text, setText] = useState(texts[0]["NL"]["text"]);
-     const [title, setTitle] = useState(texts[0]["NL"]["title"]);
-     console.log(language)
+     const [text, setText] = useState(texts[0][language]["text"]);
+     const [title, setTitle] = useState(texts[0][language]["title"]);
+     //console.log(language)
+
 
      setInterval(function(){
          checkTime();
-         //fetchData(story, language)
+         //setText(texts[story][language]["text"]);
+         //setTitle(texts[story][language]["title"])
      }, 1000)
 
 
@@ -22,10 +24,11 @@ import texts from "../data/text.json"
          if (minute % 2 == 0 && second == 0) {
              if (story < 4){
                  setStory(Number(story) + 1)
-
+                 fetchData(story, language)
              } else {
                  console.log(story)
                  setStory(0);
+                 fetchData(story, language)
              }
          } else {
 
@@ -44,13 +47,31 @@ import texts from "../data/text.json"
 
      function resetText(lang) {
          setLanguage(lang)
-         setText(texts[story][lang]["text"]);
-         setTitle(texts[story][lang]["title"])
      }
 
 
      return(
-         <div className={"textViewer"}>
+         <div className={"textBlock"}>
+             <div>
+                 <h1 style={{textAlign:"center"}}>{texts[story]["NL"]["title"]}</h1>
+                 <div className={"textContainer"}>
+                     <p>{texts[story]["NL"]["text"]}</p>
+                 </div>
+             </div>
+             <div>
+                 <h1 style={{textAlign:"center"}}>{texts[story]["UK"]["title"]}</h1>
+                 <div className={"textContainer"}>
+                     <p>{texts[story]["UK"]["text"]}</p>
+                 </div>
+             </div>
+             <div>
+                 <h1 style={{textAlign:"center"}}>{texts[story]["EN"]["title"]}</h1>
+                 <div className={"textContainer"}>
+                     <p>{texts[story]["EN"]["text"]}</p>
+                 </div>
+             </div>
+         </div>
+         /*<div className={"textViewer"}>
              <div></div>
              <h1 style={{textAlign:"center"}}>{title}</h1>
              <div className={"textContainer"}>
@@ -68,7 +89,7 @@ import texts from "../data/text.json"
                  </div>
              </div>
              <div></div>
-         </div>
+         </div>*/
      )
  }
 
