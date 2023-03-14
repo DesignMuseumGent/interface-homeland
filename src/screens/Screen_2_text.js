@@ -58,12 +58,14 @@ import texts from "../data/text.json"
                      <p>{texts[story]["NL"]["text"]}</p>
                  </div>
              </div>
+
              <div>
                  <h1 style={{textAlign:"center"}}>{texts[story]["UK"]["title"]}</h1>
                  <div className={"textContainer"}>
                      <p>{texts[story]["UK"]["text"]}</p>
                  </div>
              </div>
+
              <div>
                  <h1 style={{textAlign:"center"}}>{texts[story]["EN"]["title"]}</h1>
                  <div className={"textContainer"}>
