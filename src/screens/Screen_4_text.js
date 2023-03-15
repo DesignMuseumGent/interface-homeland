@@ -4,52 +4,55 @@ import TextBlock from "../utils/TextBlock";
 
 const Screen4text = (props) => {
 
-    const [counter, setCounter] = useState(0)
     const [story, setStory] = useState(0);
     const [language, setLanguage] = useState("NL");
     const [text, setText] = useState(texts[0][language]["text"]);
     const [title, setTitle] = useState(texts[0][language]["title"]);
     const [small, setSmall] = useState(false);
+    const [counter, setCounter] = useState(0)
+
 
 
     setInterval(function(){
-        checkTime();
+        checkTime(counter);
+
     }, 1000)
 
 
-    function checkTime() {
+    function checkTime(counter) {
         let minute = new Date().getMinutes();
         let second = new Date().getSeconds();
+        let mil = new Date().getMilliseconds()
+
         if (second == 20) {
             setCounter(counter + 1)
             console.log("counter: " + counter)
 
-            if (counter < 1){
-                setStory(Number(story) + 1);
-                fetchData(story, language)
-                console.log("story: " + story)
+            try{
+                if (counter < 1){
+                    setStory(Number(story) + 1);
+                    fetchData(story, language)
+                    console.log("story: " + story)
+
+                } else {
+                    setStory(0);
+                    fetchData(story, language)
+
+                    setCounter(0);
+                    console.log("story: " + story);
+
+                }
+            } catch (e) {console.log(e)}
 
 
-            } else if (counter === 1) {
-                setStory(1)
-                fetchData(story, language)
-
-                console.log("story: " + story)
-            } else {
-                setStory(0);
-                fetchData(story, language)
-
-                setCounter(0);
-                console.log("story: " + story);
-
-            }
         } else {
 
         }
+
     }
 
     function fetchData(storyNumber, lang) {
-        for (let i = 0; i < texts.length(); i++) {
+        for (let i = 0; i < 2; i++) {
             if (texts[i].story == storyNumber) {
                 setText(texts[i][lang]["text"]);
                 setTitle(texts[i][lang]["title"])
