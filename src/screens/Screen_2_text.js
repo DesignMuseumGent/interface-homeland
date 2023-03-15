@@ -64,7 +64,7 @@ import TextBlock from "../utils/TextBlock";
 
      return(
          <div className={"textBlock"}>
-             <TextBlock lang={language} story={story}/>
+             <TextBlock lang={language} story={story} texts={texts}/>
              <div className={"grid-even-3"}>
                  <div>
                      <div className={"button"} onClick={()=>resetText("NL")}>
@@ -84,26 +84,6 @@ import TextBlock from "../utils/TextBlock";
              </div>
          </div>
 
-
-         /*<div className={"textViewer"}>
-             <div></div>
-             <h1 style={{textAlign:"center"}}>{title}</h1>
-             <div className={"textContainer"}>
-                <p>{text}</p>
-             </div>
-             <div className={"grid-even-3"}>
-                 <div>
-                     <p className={"button"} onClick={()=>resetText("NL")}>NL</p>
-                 </div>
-                 <div>
-                     <p className={"button"} onClick={()=>resetText("EN")}>EN</p>
-                 </div>
-                 <div>
-                     <p className={"button"} onClick={()=>resetText("UK")}>UK</p>
-                 </div>
-             </div>
-             <div></div>
-         </div>*/
      )
  }
 

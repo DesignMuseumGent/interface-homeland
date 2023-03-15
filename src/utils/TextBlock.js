@@ -1,9 +1,9 @@
 import React from "react";
-import texts from "../data/MilkedCeramics.json";
 
 const TextBlock = (props) => {
     const _lang = props.lang;
     const _story = props.story;
+    const texts = props.texts;
 
     return(
         <div>

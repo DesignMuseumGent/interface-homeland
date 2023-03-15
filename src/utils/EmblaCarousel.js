@@ -9,10 +9,14 @@ import {s2} from "./imagesByIndex";
 import {s3} from "./imagesByIndex";
 import {s4} from "./imagesByIndex";
 
+import {_s0} from "./imagesByIndex";
+import {_s1} from "./imagesByIndex";
+
+
 const EmblaCarousel = (props) => {
 
     let s;
-    const stories = [s0, s1, s2, s3, s4]
+    const stories = [s0, s1, s2, s3, s4, _s0, _s1]
 
     s = props.story
     let story = stories[s]
