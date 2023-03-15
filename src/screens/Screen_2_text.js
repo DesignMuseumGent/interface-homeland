@@ -9,6 +9,7 @@ import TextBlock from "../utils/TextBlock";
      const [language, setLanguage] = useState("NL");
      const [text, setText] = useState(texts[3][language]["text"]);
      const [title, setTitle] = useState(texts[3][language]["title"]);
+     const [small, setSmall] = useState(false);
      //console.log(language)
      console.log(text);
 
@@ -57,27 +58,32 @@ import TextBlock from "../utils/TextBlock";
          }
      }
 
-     function resetText(lang) {
+     function resetText(lang, font) {
          setLanguage(lang)
+         if (font) {
+             setSmall(true)
+         } else if (!font) {
+             setSmall(false)
+         }
      }
 
 
      return(
          <div className={"textBlock"}>
-             <TextBlock lang={language} story={story} texts={texts}/>
+             <TextBlock lang={language} story={story} texts={texts} font={small}/>
              <div className={"grid-even-3"}>
                  <div>
-                     <div className={"button"} onClick={()=>resetText("NL")}>
+                     <div className={"button"} onClick={()=>resetText("NL", false)}>
                          <h1 className={"text"}>NL</h1>
                      </div>
                  </div>
                  <div>
-                     <div className={"button"} onClick={()=>resetText("EN")}>
+                     <div className={"button"} onClick={()=>resetText("EN", false)}>
                          <h1 className={"text"}>EN</h1>
                      </div>
                  </div>
                  <div>
-                     <div className={"button"} onClick={()=>resetText("UK")}>
+                     <div className={"button"} onClick={()=>resetText("UK", true)}>
                          <h1 className={"text"}>UA</h1>
                      </div>
                  </div>

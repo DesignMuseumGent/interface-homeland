@@ -9,6 +9,7 @@ const Screen4text = (props) => {
     const [language, setLanguage] = useState("NL");
     const [text, setText] = useState(texts[0][language]["text"]);
     const [title, setTitle] = useState(texts[0][language]["title"]);
+    const [small, setSmall] = useState(false);
 
 
     setInterval(function(){
@@ -56,13 +57,18 @@ const Screen4text = (props) => {
         }
     }
 
-    function resetText(lang) {
+    function resetText(lang, font) {
         setLanguage(lang)
+        if (font) {
+            setSmall(true)
+        } else if (!font) {
+            setSmall(false)
+        }
     }
 
     return(
         <div className={"textBlock"}>
-            <TextBlock lang={language} story={story} texts={texts}/>
+            <TextBlock lang={language} story={story} texts={texts} font={small}/>
             <div className={"grid-even-3"}>
                 <div>
                     <div className={"button"} onClick={()=>resetText("NL")}>
