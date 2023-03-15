@@ -1,53 +1,39 @@
 import React, {useEffect, useState, useTransition} from "react";
 import texts from "../data/MilkedCeramics.json"
 import TextBlock from "../utils/TextBlock";
+import {useInterval} from "../utils/utils";
+
 
  const Screen2text = (props) =>  {
 
-     const [counter, setCounter] = useState(4)
-     const [story, setStory] = useState(4);
+     const [counter, setCounter] = useState(0)
+     const [story, setStory] = useState(0);
      const [language, setLanguage] = useState("NL");
-     const [text, setText] = useState(texts[3][language]["text"]);
-     const [title, setTitle] = useState(texts[3][language]["title"]);
+     const [text, setText] = useState(texts[0][language]["text"]);
+     const [title, setTitle] = useState(texts[0][language]["title"]);
      const [small, setSmall] = useState(false);
+     const [count, setCount] = useState(0);
+
      //console.log(language)
      console.log(text);
 
-     setInterval(function(){
-         checkTime();
+     let max = 4
+
+     useInterval(function(){
+         let sec = new Date().getSeconds()
+         if (sec === 20) {
+             if (count < max) {
+                 setCount(count+1)
+                 setStory(count)
+                 console.log(count);
+             } else {
+                 setCount(0)
+                 setStory(count)
+                 console.log(count);
+             }
+         }
      }, 1000)
 
-
-     function checkTime() {
-         let minute = new Date().getMinutes();
-         let second = new Date().getSeconds();
-         if (second == 20) {
-             setCounter(counter + 1)
-             console.log("counter: " + counter)
-
-             if (counter < 4){
-                 setStory(Number(story) + 1);
-                 fetchData(story, language)
-                 console.log("story: " + story)
-
-
-             } else if (counter === 4) {
-                 setStory(4)
-                 fetchData(story, language)
-
-                 console.log("story: " + story)
-             } else {
-                 setStory(0);
-                 fetchData(story, language)
-
-                 setCounter(0);
-                 console.log("story: " + story);
-
-             }
-         } else {
-
-         }
-     }
 
      function fetchData(storyNumber, lang) {
          for (let i = 0; i < 5; i++) {

@@ -1,40 +1,28 @@
-import React, {useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import EmblaCarousel from "../utils/EmblaCarousel";
+import {useInterval} from "../utils/utils";
 
 
 const Screen3images = () => {
 
-    const [counter, setCounter] = useState(5)
+    const [count, setCount] = useState(5)
     const [story, setStory] = useState(5)
 
-    setInterval(function(){
-        checkTime();
-    }, 1000)
 
-    function checkTime() {
-        let minute = new Date().getMinutes();
-        let second = new Date().getSeconds();
-        if (second == 20) {
-            setCounter(counter + 1)
-            console.log("counter: " + counter)
-
-            if (counter < 6){
-                setStory(Number(story) + 1);
-                console.log("story: " + story)
-
-            } else if (counter === 6) {
-                setStory(6)
-                console.log("story: " + story)
+    useInterval(function(){
+        let sec = new Date().getSeconds()
+        if (sec === 20) {
+            if (count < 6) {
+                setCount(count+1)
+                setStory(count)
+                console.log(count);
             } else {
-                setStory(5);
-                setCounter(5);
-                console.log("story: " + story);
-
+                setCount(5)
+                setStory(count)
+                console.log(count);
             }
-        } else {
-
         }
-    }
+    }, 1000)
 
 
     return(
