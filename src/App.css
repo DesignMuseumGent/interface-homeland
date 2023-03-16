@@ -40,6 +40,14 @@ html, body {
     src: local("Poppins-Light"), url(fonts/Poppins-Light.ttf);
 }
 
+@font-face {
+    font-family: Poppins-Regular;
+    src: local("Poppins-Regular"), url(fonts/Poppins-Regular.ttf.ttf);
+
+
+
+}
+
 h1{
     font-family: "Poppins-Light";
 }
@@ -52,7 +60,7 @@ img {
 
 p{
     font-size: 2vh;
-    font-family: "Poppins-Light";
+    font-family: "Poppins-Regular";
 }
 
 .text{
