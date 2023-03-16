@@ -50,6 +50,11 @@ html, body {
     src: local("Poppins-Medium"), url(fonts/Poppins-Medium.ttf);
 }
 
+@font-face {
+    font-family: Proximanova-Medium;
+    src: local("Proximanovacond-medium"), url(fonts/Proximanovacond-medium.otf);
+}
+
 h1{
     font-family: "Poppins-Medium";
 }
@@ -71,6 +76,7 @@ p{
 
 .textSmall {
     font-size: 2.8vw;
+    font-family: "Poppins-Medium";
 }
 
 .title{
@@ -112,7 +118,11 @@ p{
     top: auto;
     bottom: auto;
     display: grid;
-    grid-template-rows: 7fr 2fr;
+    grid-template-rows: 8fr 1fr;
+}
+
+.Hline {
+    border-top: 2px solid black
 }
 
 /*EMBLA*/
