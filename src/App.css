@@ -51,14 +51,15 @@ img {
 
 p{
     font-size: 2vh;
+    font-family: "Poppins-Light";
 }
 
 .text{
-    font-size: 4vw;
+    font-size: 3vw;
 }
 
 .textSmall {
-    font-size: 3vw;
+    font-size: 2.8vw;
 }
 
 .title{

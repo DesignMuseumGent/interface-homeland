@@ -15,7 +15,20 @@ const Screen4text = (props) => {
 
     let max = 1
 
-
+    useInterval(function(){
+        let sec = new Date().getSeconds()
+        if (sec === 20) {
+            if (count < max) {
+                setCount(count+1)
+                setStory(count)
+                console.log(count);
+            } else {
+                setCount(0)
+                setStory(count)
+                console.log(count);
+            }
+        }
+    }, 1000)
 
     function fetchData(storyNumber, lang) {
         for (let i = 0; i < 2; i++) {
