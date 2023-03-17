@@ -13,19 +13,23 @@ const Screen4text = (props) => {
     const [small, setSmall] = useState(false);
     const [count, setCount] = useState(0);
 
+    console.log(text);
     let max = 1
 
     useInterval(function(){
         let sec = new Date().getSeconds()
         if (sec === 20) {
-            if (count < max) {
+            if (count < max || count ===0) {
                 setCount(count+1)
                 setStory(count)
                 console.log(count);
+                console.log(story);
             } else {
                 setCount(0)
                 setStory(count)
                 console.log(count);
+                console.log(story);
+
             }
         }
     }, 1000)
@@ -52,7 +56,6 @@ const Screen4text = (props) => {
         <div className={"textBlock"}>
             <TextBlock lang={language} story={story} texts={texts} font={small}/>
             <div className={"grid-even-3 Hline"}>
-
                 <div>
                     <div className={"button"} onClick={()=>resetText("NL")}>
                         <h1 className={"text"}>NL</h1>
