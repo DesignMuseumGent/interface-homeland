@@ -31,7 +31,7 @@ const Screen4text = (props) => {
     }, 1000)
 
     function fetchData(storyNumber, lang) {
-        for (let i = 0; i < 2; i++) {
+        for (let i = 0; i < 1; i++) {
             if (texts[i].story == storyNumber) {
                 setText(texts[i][lang]["text"]);
                 setTitle(texts[i][lang]["title"])
