@@ -66,12 +66,13 @@ img {
 }
 
 p{
-    font-size: 2vh;
+    font-size: 27px;
     font-family: "Poppins-Regular";
 }
 
 .text{
-    font-size: 3vw;
+    font-size: 27px;
+    lighe-height: 24px ;
 }
 
 .textSmall {
@@ -80,8 +81,9 @@ p{
 }
 
 .title{
-    font-size: 5vw;
+    font-size: 41px;
     text-transform: uppercase;
+    line-height:44px;
 }
 
 .textContainer{
