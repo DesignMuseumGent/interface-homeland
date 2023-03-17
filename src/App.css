@@ -11,6 +11,8 @@ html, body {
     orientation: landscape;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
+
+    font-kerning: none;
 }
 
 .screenContainer{
