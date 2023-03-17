@@ -62,8 +62,12 @@ h1{
 }
 
 img {
-    height: 100vh;
-    width: 100vw;
+    height: 99vh;
+    width: 99vw;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
     object-fit:contain;
 }
 
@@ -133,5 +137,5 @@ p{
 
 .embla {overflow: hidden;}
 .embla__container { display: flex;}
-.embla__slide {  flex: 0 0 100%;  min-width: 0;}
+.embla__slide {  flex: 0 0 100%;  min-width: 0; max-width: 100vw}
 
