@@ -13,6 +13,7 @@ const Screen4text = (props) => {
     const [small, setSmall] = useState(false);
     const [count, setCount] = useState(0);
 
+
     console.log(text);
     let max = 1
 
