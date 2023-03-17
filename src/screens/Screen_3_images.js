@@ -4,10 +4,8 @@ import {useInterval} from "../utils/utils";
 
 
 const Screen3images = () => {
-
     const [count, setCount] = useState(5)
     const [story, setStory] = useState(5)
-
 
     useInterval(function(){
         let sec = new Date().getSeconds()
