@@ -6,7 +6,6 @@ import {useInterval} from "../utils/utils";
 
  const Screen2text = (props) =>  {
 
-     const [counter, setCounter] = useState(0)
      const [story, setStory] = useState(0);
      const [language, setLanguage] = useState("NL");
      const [text, setText] = useState(texts[0][language]["text"]);
