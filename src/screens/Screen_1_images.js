@@ -8,10 +8,9 @@ const Screen1images = (props) =>  {
     const [story, setStory] = useState(0)
 
     useInterval(function(){
-        let _len = story.length() -1 ;
         let sec = new Date().getSeconds()
         if (sec === 20) {
-            if (count < _len) {
+            if (count < 4) {
                 setCount(count+1)
                 setStory(count)
                 console.log(count);
