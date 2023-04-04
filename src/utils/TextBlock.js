@@ -12,6 +12,11 @@ const TextBlock = (props) => {
             <div className={"textContainer"}>
                 <p style={{padding: "4vw"}} className={font?"textSmall":"text"}>{texts[_story][_lang]["text"]}</p>
             </div>
+            {props.credits &&
+                <div className={"textContainer"}>
+                    <p style={{padding: "4vw", bottom:0, fontStyle:"italic"}} className={font?"textSmall":"text"}>photo credits: {texts[_story][_lang]["credits"]}</p>
+                </div>
+            }
         </div>
     )
 

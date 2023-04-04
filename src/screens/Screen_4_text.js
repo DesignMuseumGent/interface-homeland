@@ -54,7 +54,7 @@ const Screen4text = (props) => {
 
     return(
         <div className={"textBlock"}>
-            <TextBlock lang={language} story={story} texts={texts} font={small}/>
+            <TextBlock lang={language} story={story} texts={texts} font={small} credits={true}/>
             <div className={"grid-even-3 Hline"}>
                 <div>
                     <div className={"button"} onClick={()=>resetText("NL")}>
