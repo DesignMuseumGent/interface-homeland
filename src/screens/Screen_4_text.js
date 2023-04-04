@@ -18,6 +18,12 @@ const Screen4text = (props) => {
 
     useInterval(function(){
         let sec = new Date().getSeconds()
+        let min = new Date().getMinutes()
+        if (min % 10 === 0) {
+            setStory(0);
+            setCount(0);
+        }
+
         if (sec === 20) {
             if (count < max || count ===0) {
                 setCount(count+1)
@@ -36,7 +42,7 @@ const Screen4text = (props) => {
 
     function fetchData(storyNumber, lang) {
         for (let i = 0; i < 1; i++) {
-            if (texts[i].story == storyNumber) {
+            if (texts[i].story === storyNumber) {
                 setText(texts[i][lang]["text"]);
                 setTitle(texts[i][lang]["title"])
             }

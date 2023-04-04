@@ -20,6 +20,11 @@ import {useInterval} from "../utils/utils";
 
      useInterval(function(){
          let sec = new Date().getSeconds()
+         let min = new Date().getMinutes()
+         if (min % 10 === 0) {
+             setStory(0);
+             setCount(0);
+         }
          if (sec === 20) {
              if (count < max) {
                  setCount(count+1)
@@ -36,7 +41,7 @@ import {useInterval} from "../utils/utils";
 
      function fetchData(storyNumber, lang) {
          for (let i = 0; i < 5; i++) {
-             if (texts[i].story == storyNumber) {
+             if (texts[i].story === storyNumber) {
                  setText(texts[i][lang]["text"]);
                  setTitle(texts[i][lang]["title"])
              }

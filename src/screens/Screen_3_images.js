@@ -9,6 +9,11 @@ const Screen3images = () => {
 
     useInterval(function(){
         let sec = new Date().getSeconds()
+        let min = new Date().getMinutes()
+        if (min % 10 === 0) {
+            setStory(5);
+            setCount(5);
+        }
         if (sec === 20) {
             if (count < 6) {
                 setCount(count+1)
