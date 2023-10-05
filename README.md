@@ -17,5 +17,3 @@ npm start
 ```
 
 open in localhost:PORT
-
-all text and media in this application is copyrighted. 
